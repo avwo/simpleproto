@@ -1,0 +1,26 @@
+{
+  "name": "simpleproto",
+  "version": "1.0.0",
+  "description": "Simple transfer protocol for TCP",
+  "scripts": {
+    "lint": "eslint *.js lib",
+    "lintfix": "eslint --fix *.js lib",
+    "test": "mocha ./test.js --timeout 100000",
+    "cov": "istanbul cover node_modules/mocha/bin/_mocha ./test.js --timeout 100000"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/avwo/simpleproto.git"
+  },
+  "devDependencies": {
+    "babel-eslint": "~8.2.1",
+    "eslint": "~4.15.0",
+    "eslint-config-imweb": "^0.2.7",
+    "istanbul": "^0.4.5",
+    "mocha": "^5.2.0",
+    "socketx": "^1.0.1"
+  },
+  "engines": {
+    "node": ">= 6.0.0"
+  }
+}
