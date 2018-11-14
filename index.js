@@ -66,6 +66,7 @@ class Decoder {
     const message = this.buffer.slice(0, this.messageLength);
     this.buffer = this.buffer.slice(this.messageLength);
     this.onData(message);
+    this.expectPacket();
   }
 }
 

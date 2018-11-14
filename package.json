@@ -1,6 +1,6 @@
 {
   "name": "simpleproto",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Simple transfer protocol for TCP",
   "scripts": {
     "lint": "eslint *.js lib",
