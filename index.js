@@ -26,6 +26,7 @@ class Decoder {
       this.write = throwOccupiedError;
     }
   }
+
   write(data) {
     if (!Buffer.isBuffer(data)) {
       return;
@@ -33,6 +34,7 @@ class Decoder {
     this.buffer = this.buffer ? Buffer.concat([this.buffer, data]) : data;
     this.expectPacket();
   }
+
   expectPacket() {
     if (this.parsingHeader) {
       return this.expectHeader();
@@ -44,6 +46,7 @@ class Decoder {
     this.buffer = this.buffer.slice(start + 1);
     this.expectHeader();
   }
+
   expectHeader() {
     this.parsingHeader = true;
     if (this.parsingData) {
@@ -56,6 +59,7 @@ class Decoder {
     this.buffer = this.buffer.slice(LENGTH_FIELD_LEN);
     this.expectData();
   }
+
   expectData() {
     this.parsingData = true;
     if (this.buffer.length < this.messageLength) {
