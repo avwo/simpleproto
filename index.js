@@ -20,9 +20,8 @@ const throwOccupiedError = () => {
 class Decoder {
   constructor(stream, onData) {
     this.onData = typeof onData === 'function' ? onData : noop;
-    this.write = this.write.bind(this);
     if (stream) {
-      stream.on('data', this.write);
+      stream.on('data', this.write.bind(this));
       this.write = throwOccupiedError;
     }
   }
