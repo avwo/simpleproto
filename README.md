@@ -103,7 +103,7 @@ const { encode, decode, Decoder } = require('simpleproto');
 
 1. `encode(data)`：对数据进行组包，data可以为buffer、string、object
 2. `decode(stream, cb)`：stream为数据流(socket、文件流等)，每次接收到新的数据包都会触发cb(data)
-3. `new Decoder([stream[, cb]])`：解包类对象，构造方法可以传人 `stream` 和 `cb` ，功能同 `decode(stream, cb)`；也可以用于解包非数据流的字节码：
+3. `new Decoder([stream[, cb]])`：解包类对象，构造方法可以传入 `stream` 和 `cb` ，功能同 `decode(stream, cb)`；也可以用于解包非数据流的字节码：
 
 ``` js
 const decoder = new Decoder();
